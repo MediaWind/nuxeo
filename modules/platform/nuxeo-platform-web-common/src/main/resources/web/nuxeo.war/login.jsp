@@ -26,6 +26,7 @@
 String productName = Framework.getProperty(Environment.PRODUCT_NAME);
 String productVersion = Framework.getProperty(Environment.PRODUCT_VERSION);
 String testerName = Framework.getProperty("org.nuxeo.ecm.tester.name");
+String host = Framework.getProperty("org.nuxeo.ecm.instance.host");
 boolean isTesting = "Nuxeo-Selenium-Tester".equals(testerName);
 String context = request.getContextPath();
 
@@ -84,8 +85,8 @@ if (selectedLanguage != null) { %>
 <title>
   <fmt:message bundle="${messages}" key="label.userSession.login" /> - <%=productName%>
 </title>
-<link rel="icon" type="image/png" href="<%=context%>/icons/favicon.png" />
-<link rel="shortcut icon" type="image/x-icon" href="<%=context%>/icons/favicon.ico" />
+<link rel="icon" type="image/png" href="<%=context%>/icons/favicon_<%=host%>.png" />
+<link rel="shortcut icon" type="image/x-icon" href="<%=context%>/icons/favicon_<%=host%>.ico" />
 <script type="text/javascript" src="<%=context%>/scripts/detect_timezone.js"></script>
 <script type="text/javascript" src="<%=context%>/scripts/nxtimezone.js"></script>
 <% if (displayMobileBanner) { %>
