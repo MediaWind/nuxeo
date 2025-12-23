@@ -13,6 +13,7 @@
         <locale>nl_BE</locale>
       </supportedLocales>
       <disableBackgroundSizeCover>true</disableBackgroundSizeCover>
+	  <bodyBackgroundStyle>none</bodyBackgroundStyle>
       <headerStyle></headerStyle>
       <footerStyle></footerStyle>
       <loginBoxBackgroundStyle></loginBoxBackgroundStyle>
