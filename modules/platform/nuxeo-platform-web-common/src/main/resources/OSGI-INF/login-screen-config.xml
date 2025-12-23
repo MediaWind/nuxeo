@@ -7,7 +7,21 @@
       <supportedLocales>
         <locale>en_GB</locale>
         <locale>en_US</locale>
+        <locale>fr_FR</locale>
+        <locale>fr_BE</locale>
+        <locale>nl_NL</locale>
+        <locale>nl_BE</locale>
       </supportedLocales>
+      <disableBackgroundSizeCover>true</disableBackgroundSizeCover>
+	  <bodyBackgroundStyle>none</bodyBackgroundStyle>
+      <headerStyle></headerStyle>
+      <footerStyle></footerStyle>
+      <loginBoxBackgroundStyle></loginBoxBackgroundStyle>
+      <loginBoxWidth>400px</loginBoxWidth>
+      <logoUrl>${org.nuxeo.ecm.contextPath}/img/logo_${org.nuxeo.ecm.instance.host}.png</logoUrl>
+      <logoAlt>${org.nuxeo.ecm.instance.host}</logoAlt>
+      <logoWidth>128</logoWidth>
+      <logoHeight>48</logoHeight>
     </loginScreenConfig>
   </extension>
 </component>
