@@ -135,9 +135,9 @@ VOLUME /var/lib/nuxeo
 VOLUME /var/log/nuxeo
 VOLUME /tmp
 
-COPY ./nuxeo-web-ui-3.1.15.zip /home/nuxeo/
-COPY ./amazon-s3-online-storage-2023.25.10.zip /home/nuxeo/
-COPY ./nuxeo-mysql-package-2023.25.10.zip /home/nuxeo/
+COPY ./nuxeo-web-ui-3.1.15-mw.1.zip /home/nuxeo/nuxeo-web-ui.zip
+COPY ./amazon-s3-online-storage-2023.25.10.zip /home/nuxeo/amazon-s3-online-storage.zip
+COPY ./nuxeo-mysql-package-2023.25.10.zip /home/nuxeo/nuxeo-mysql-package.zip
 COPY ./init.sh /home/nuxeo/
 RUN chmod +x /home/nuxeo/init.sh
 

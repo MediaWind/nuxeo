@@ -26,6 +26,7 @@
 String productName = Framework.getProperty(Environment.PRODUCT_NAME);
 String productVersion = Framework.getProperty(Environment.PRODUCT_VERSION);
 String testerName = Framework.getProperty("org.nuxeo.ecm.tester.name");
+String host = Framework.getProperty("org.nuxeo.ecm.instance.host");
 boolean isTesting = "Nuxeo-Selenium-Tester".equals(testerName);
 String context = request.getContextPath();
 
@@ -46,7 +47,8 @@ List<LoginProviderLink> providers = screenConfig.getProviders();
 boolean useExternalProviders = providers!=null && providers.size()>0;
 
 // fetch Login Screen config and manage default
-boolean showNews = screenConfig.getDisplayNews();
+// boolean showNews = screenConfig.getDisplayNews();
+boolean showNews = false;
 String iframeUrl = screenConfig.getNewsIframeUrl();
 
 String backgroundPath = LoginScreenHelper.getValueWithDefault(screenConfig.getBackgroundImage(), context + "/img/login-bg.svg");
@@ -84,8 +86,8 @@ if (selectedLanguage != null) { %>
 <title>
   <fmt:message bundle="${messages}" key="label.userSession.login" /> - <%=productName%>
 </title>
-<link rel="icon" type="image/png" href="<%=context%>/icons/favicon.png" />
-<link rel="shortcut icon" type="image/x-icon" href="<%=context%>/icons/favicon.ico" />
+<link rel="icon" type="image/png" href="<%=context%>/icons/favicon_<%=host%>.png" />
+<link rel="shortcut icon" type="image/x-icon" href="<%=context%>/icons/favicon_<%=host%>.ico" />
 <script type="text/javascript" src="<%=context%>/scripts/detect_timezone.js"></script>
 <script type="text/javascript" src="<%=context%>/scripts/nxtimezone.js"></script>
 <% if (displayMobileBanner) { %>
@@ -317,7 +319,8 @@ if (selectedLanguage != null) { %>
 
   .login_button:hover,
   .login_button:focus {
-    background-color: rgba(0, 102, 255, 0.7);
+    background-color: <%= loginButtonBackgroundColor %>;
+    opacity: 0.9;
   }
 
   /* Other ids */
