@@ -15,13 +15,14 @@
       <disableBackgroundSizeCover>true</disableBackgroundSizeCover>
       <bodyBackgroundStyle>none</bodyBackgroundStyle>
       <headerStyle></headerStyle>
-      <footerStyle></footerStyle>
+      <footerStyle>display: none;</footerStyle>
       <loginBoxBackgroundStyle></loginBoxBackgroundStyle>
       <loginBoxWidth>400px</loginBoxWidth>
       <logoUrl>${org.nuxeo.ecm.contextPath}/img/logo_${org.nuxeo.ecm.instance.host}.png</logoUrl>
       <logoAlt>${org.nuxeo.ecm.instance.host}</logoAlt>
       <logoWidth>128</logoWidth>
       <logoHeight>48</logoHeight>
+      <loginButtonBackgroundColor>#426368</loginButtonBackgroundColor>
     </loginScreenConfig>
   </extension>
 </component>

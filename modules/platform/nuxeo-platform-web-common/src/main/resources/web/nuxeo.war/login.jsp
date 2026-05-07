@@ -47,7 +47,8 @@ List<LoginProviderLink> providers = screenConfig.getProviders();
 boolean useExternalProviders = providers!=null && providers.size()>0;
 
 // fetch Login Screen config and manage default
-boolean showNews = screenConfig.getDisplayNews();
+// boolean showNews = screenConfig.getDisplayNews();
+boolean showNews = false;
 String iframeUrl = screenConfig.getNewsIframeUrl();
 
 String backgroundPath = LoginScreenHelper.getValueWithDefault(screenConfig.getBackgroundImage(), context + "/img/login-bg.svg");
@@ -318,7 +319,8 @@ if (selectedLanguage != null) { %>
 
   .login_button:hover,
   .login_button:focus {
-    background-color: rgba(0, 102, 255, 0.7);
+    background-color: <%= loginButtonBackgroundColor %>;
+    opacity: 0.9;
   }
 
   /* Other ids */
